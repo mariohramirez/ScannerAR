@@ -12,7 +12,7 @@ public class ImageTrackerManager : MonoBehaviour
     //El siguiente booleano nos ayuda a saber cuando la imagen puede o no ser rastreada
     private bool isImageTrackable;
 
-    private void OnEnebale()
+    private void OnEnable()
     {
         aRTrackedImageManager.trackedImagesChanged += OnImageChanged;
     }
