@@ -59,10 +59,10 @@ public class ImageTrackerManager : MonoBehaviour
             Limited, */
             else if(trackedImage.trackingState == TrackingState.Limited)
             {
-                if(!isImageTrackable)
+                if(isImageTrackable)
                 {
                     isImageTrackable = false;
-                    videoPlayer.gameObject.SetActive(true);
+                    videoPlayer.gameObject.SetActive(false);
                     videoPlayer.Pause();
                 }
             }
