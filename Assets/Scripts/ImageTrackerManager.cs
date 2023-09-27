@@ -21,7 +21,7 @@ public class ImageTrackerManager : MonoBehaviour
     private Dictionary<string, VideoPlayer> videoPlayer = new Dictionary<string, VideoPlayer>();
     //Se referencia al componente VideoPlayer
     private VideoPlayer videoPlayerUnique;
-    private Quaternion initialRotation = Quaternion.Euler(0f, 90f, 90f);
+    private Quaternion initialRotation = Quaternion.Euler(270f, 270f, 90f);
     //El siguiente booleano nos ayuda a saber cuando la imagen puede o no ser rastreada
     private bool isImageTrackable;
 
@@ -42,6 +42,7 @@ public class ImageTrackerManager : MonoBehaviour
             //Se asigna un estado de inactividad al GameObject que anadimos al diccionario
             newARModel.SetActive(false);
             modelState.Add(newARModel.name, false);
+            //Anadimos al diccionario del reproductor de video, el video que hay en el modelo
             videoPlayer.Add(newARModel.name, newARModel.GetComponentInChildren<VideoPlayer>());
         }
     }
